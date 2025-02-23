@@ -28,4 +28,25 @@ public class ProductService {
     public void addProduct(Product product){
         products.add(product);
     }
+
+    public void updateProduct(Product product){
+        int index = 0;
+        for(int i = 0; i < products.size(); i++){
+            if(products.get(i).getProdId() == product.getProdId()){
+                index = i;
+            }
+        }
+        products.set(index, product);
+    }
+
+    // This logic is not effecient as this code is for learning purpose of Spring Boot
+    public void deleteProductByID(int prodId){
+        int index = 0;
+        for(int i = 0; i < products.size(); i++){
+            if(products.get(i).getProdId() == prodId){
+                index = i;
+            }
+        }
+        products.remove(index);
+    }
 }
