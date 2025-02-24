@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import com.webpring.simpleWebApp.model.Product;
 import com.webpring.simpleWebApp.repository.ProductRepo;
 
+// All commented code is hardcoded implementation , but jpaRepository provides all same functionality 
 @Service
 public class ProductService {
 
